@@ -30,7 +30,7 @@ class TabBarViewController: UITabBarController {
     func configViewControllers() {
         let childClassNames = [
             ["ClassName": "VideoFeedViewController", "Name": "首页"],
-            ["ClassName": "TimeLineViewController", "Name": "关注"],
+            ["ClassName": "TimeLineViewController", "Name": "朋友"],
             ["ClassName": "", "Image": "btn_home_add75x49"],
             ["ClassName": "", "Name": "消息"],
             ["ClassName": "", "Name": "我"],

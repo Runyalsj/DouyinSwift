@@ -36,6 +36,7 @@ class VideoFeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addHotView()
+        addContentView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,7 +65,31 @@ extension VideoFeedViewController {
         hotView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         hotView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         hotView.heightAnchor.constraint(equalToConstant: 44).isActive = true
-        hotView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        hotView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 15).isActive = true
+    }
+    
+    func addContentView() {
+        let avatarView = AvatarView()
+        // 设置头像、昵称、心情描述、内容和头饰的内容
+        avatarView.avatarImageName = "avatar_image"
+        avatarView.nickname = "用户名"
+        avatarView.mood = "心情好"
+        avatarView.content = "这是一段内容文本，它可以自动调整视图的高度以适应文本的长度。这是一段内容文本，它可以自动调整视图的高度以适应文本的长度。这是一段内容文本，它可以自动调整视图的高度以适应文本的长度。这是一段内容文本，它可以自动调整视图的高度以适应文本的长度。"
+        avatarView.accessoryImageName = "accessory_image"
+        
+        // 将头像组件视图添加到主视图上
+        view.addSubview(avatarView)
+        avatarView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            avatarView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            avatarView.bottomAnchor.constraint(equalTo: hotView.topAnchor, constant: -20),
+            avatarView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+        ])
+        
+        // 更新内容文本后，调用 layoutIfNeeded() 来触发更新布局
+        avatarView.layoutIfNeeded()
+
     }
     
 }

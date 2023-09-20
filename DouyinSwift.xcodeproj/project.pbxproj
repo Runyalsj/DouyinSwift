@@ -102,6 +102,7 @@
 		83C6BBB9229AB9AF00E7D0D5 /* WebP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C6BB8E229AB9AF00E7D0D5 /* WebP.framework */; };
 		9B95FC1F2ABB56B600526258 /* HotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95FC1E2ABB56B600526258 /* HotView.swift */; };
 		9B95FC232ABB58C900526258 /* hotfire.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9B95FC222ABB58C900526258 /* hotfire.PNG */; };
+		9B95FC252ABB5DBD00526258 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95FC242ABB5DBD00526258 /* AvatarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -204,6 +205,7 @@
 		83C6BB8E229AB9AF00E7D0D5 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebP.framework; sourceTree = "<group>"; };
 		9B95FC1E2ABB56B600526258 /* HotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotView.swift; sourceTree = "<group>"; };
 		9B95FC222ABB58C900526258 /* hotfire.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotfire.PNG; sourceTree = "<group>"; };
+		9B95FC242ABB5DBD00526258 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		B14220EFF1CB778E1017B11E /* Pods-DouyinSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouyinSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouyinSwift/Pods-DouyinSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -316,6 +318,7 @@
 				8398566622A6753600D704F0 /* VideoListViewController.swift */,
 				833C79EB22A6E39A0030C71B /* TimeLineViewController.swift */,
 				9B95FC1E2ABB56B600526258 /* HotView.swift */,
+				9B95FC242ABB5DBD00526258 /* AvatarView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				83C6BBA1229AB9AF00E7D0D5 /* UITableViewExtensions.swift in Sources */,
 				83C6BB93229AB9AF00E7D0D5 /* WebImageError.swift in Sources */,
 				83C6BB8F229AB9AF00E7D0D5 /* WebImageDownloader.swift in Sources */,
+				9B95FC252ABB5DBD00526258 /* AvatarView.swift in Sources */,
 				830615D3229F0BF30038E318 /* VideoFeedCellMusicBtn.swift in Sources */,
 				8302C4B922A4E9BB0033C8E7 /* CollectionViewCellContentView.swift in Sources */,
 				83C6BBB2229AB9AF00E7D0D5 /* URLExtensions.swift in Sources */,
