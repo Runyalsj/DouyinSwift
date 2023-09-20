@@ -100,6 +100,8 @@
 		83C6BBB7229AB9AF00E7D0D5 /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6BB8B229AB9AE00E7D0D5 /* DictionaryExtensions.swift */; };
 		83C6BBB8229AB9AF00E7D0D5 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6BB8C229AB9AE00E7D0D5 /* StringExtensions.swift */; };
 		83C6BBB9229AB9AF00E7D0D5 /* WebP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C6BB8E229AB9AF00E7D0D5 /* WebP.framework */; };
+		9B95FC1F2ABB56B600526258 /* HotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95FC1E2ABB56B600526258 /* HotView.swift */; };
+		9B95FC232ABB58C900526258 /* hotfire.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9B95FC222ABB58C900526258 /* hotfire.PNG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -200,6 +202,8 @@
 		83C6BB8B229AB9AE00E7D0D5 /* DictionaryExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtensions.swift; sourceTree = "<group>"; };
 		83C6BB8C229AB9AE00E7D0D5 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		83C6BB8E229AB9AF00E7D0D5 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebP.framework; sourceTree = "<group>"; };
+		9B95FC1E2ABB56B600526258 /* HotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotView.swift; sourceTree = "<group>"; };
+		9B95FC222ABB58C900526258 /* hotfire.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotfire.PNG; sourceTree = "<group>"; };
 		B14220EFF1CB778E1017B11E /* Pods-DouyinSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouyinSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouyinSwift/Pods-DouyinSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -237,6 +241,7 @@
 		8342CB822296A9B0009685E2 /* DouyinSwift */ = {
 			isa = PBXGroup;
 			children = (
+				9B95FC222ABB58C900526258 /* hotfire.PNG */,
 				830615C5229EDEDF0038E318 /* LottieResources */,
 				83859D43229CF9B200EB1FE1 /* NetWork */,
 				83859D32229C197000EB1FE1 /* Data */,
@@ -310,6 +315,7 @@
 				836F4ACE22A5366200D3B6D9 /* MusicListViewController.swift */,
 				8398566622A6753600D704F0 /* VideoListViewController.swift */,
 				833C79EB22A6E39A0030C71B /* TimeLineViewController.swift */,
+				9B95FC1E2ABB56B600526258 /* HotView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -566,6 +572,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				833C79EA22A6CE180030C71B /* UserFavoriteList.json in Resources */,
+				9B95FC232ABB58C900526258 /* hotfire.PNG in Resources */,
 				8342CB8E2296A9B1009685E2 /* LaunchScreen.storyboard in Resources */,
 				8302C4A922A2F1630033C8E7 /* User.json in Resources */,
 				833C79F422A7158F0030C71B /* UserTimeline.json in Resources */,
@@ -695,6 +702,7 @@
 				833C79F222A6EC0A0030C71B /* MusicCellViewModel.swift in Sources */,
 				83B37A63229BED2400FABE03 /* VideoFeedViewController.swift in Sources */,
 				83C6BB91229AB9AF00E7D0D5 /* ImageViewExtensions.swift in Sources */,
+				9B95FC1F2ABB56B600526258 /* HotView.swift in Sources */,
 				83C6BB98229AB9AF00E7D0D5 /* MemoryCache.swift in Sources */,
 				83C6BBB4229AB9AF00E7D0D5 /* DateExtensions.swift in Sources */,
 				83A5F06522A7BB87002D024C /* TabBarViewController.swift in Sources */,

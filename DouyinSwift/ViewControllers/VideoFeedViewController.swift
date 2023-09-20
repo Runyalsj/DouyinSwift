@@ -16,12 +16,14 @@ class VideoFeedViewController: UIViewController {
     fileprivate var currentSubject: BehaviorRelay<Int> = BehaviorRelay(value: 0)
     fileprivate var bag: DisposeBag = DisposeBag()
     fileprivate var currentObserver: Disposable?
+    fileprivate let hotView: HotRankingView
     
     var tableView: UITableView
     let viewModel: VideoListViewModel = VideoListViewModel(style: .feed)
     
     required init() {
         tableView = UITableView(frame: CGRect.zero, style: .plain)
+        hotView = HotRankingView()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -33,7 +35,7 @@ class VideoFeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addBackgroundImage()
+        addHotView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,6 +55,16 @@ extension VideoFeedViewController {
         backgroundImage.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         backgroundImage.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         backgroundImage.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+    
+    
+    func addHotView() {
+        view.addSubview(hotView)
+        hotView.translatesAutoresizingMaskIntoConstraints = false
+        hotView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        hotView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        hotView.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        hotView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
     
 }
