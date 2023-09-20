@@ -47,6 +47,7 @@ class TabBarViewController: UITabBarController {
         
         customTabBar.tabItems = childItem
         setValue(customTabBar, forKey: "tabBar")
+        
     }
     
     func buildViewController(from conf:Dictionary<String, String>) -> UIViewController {
@@ -83,10 +84,12 @@ class TabBarViewController: UITabBarController {
 
 protocol CustomTabbarItem: UIView {
     var selectedStatus: Bool { get set }
+    var isMessageStatus: Bool { get set }
 }
 
 class ButtonTabbarItem: UIControl, CustomTabbarItem {
     var selectedStatus: Bool = false
+    var isMessageStatus: Bool = false
     
     var image: UIImageView
     
@@ -130,7 +133,9 @@ class ButtonTabbarItem: UIControl, CustomTabbarItem {
 }
 
 class TitleTabbarItem: UIView, CustomTabbarItem {
+    
     var btn: UIButton!
+    var bageValue: UIButton!
     var indicatorView: UIView!
     var title: String = ""
     init(title: String) {
@@ -147,11 +152,17 @@ class TitleTabbarItem: UIView, CustomTabbarItem {
         didSet {
             if selectedStatus {
                 btn.isSelected = true
-                indicatorView.isHidden = false
+                indicatorView.isHidden = true
             } else {
                 btn.isSelected = false
                 indicatorView.isHidden = true
             }
+        }
+    }
+    
+    var isMessageStatus: Bool = false {
+        didSet {
+            bageValue.isHidden = !isMessageStatus
         }
     }
     
@@ -171,6 +182,7 @@ class TitleTabbarItem: UIView, CustomTabbarItem {
         btn.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         
         indicatorView = UIView()
+        indicatorView.isHidden = true
         indicatorView.backgroundColor = UIColor.white
         indicatorView.cornerRadius = 1
         addSubview(indicatorView)
@@ -182,6 +194,21 @@ class TitleTabbarItem: UIView, CustomTabbarItem {
         guard let title = btn.title(for: .normal) else { return }
         let titleW = title.width(for: .boldSystemFont(ofSize: 16))
         indicatorView.widthAnchor.constraint(equalToConstant: titleW).isActive = true
+        
+        bageValue = UIButton(type: .custom)
+//        bageValue.setTitle("99", for: .normal)
+        let bageValueNormalStr = NSAttributedString(string: "99", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12),NSAttributedString.Key.foregroundColor: UIColor.white])
+        bageValue.setAttributedTitle(bageValueNormalStr, for: .normal)
+        bageValue.cornerRadius = 8
+        bageValue.layer.masksToBounds = true
+        bageValue.backgroundColor = UIColor.red
+        bageValue.isHidden = true
+        bageValue.contentEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        addSubview(bageValue)
+        bageValue.translatesAutoresizingMaskIntoConstraints = false
+        bageValue.trailingAnchor.constraint(equalTo: btn.trailingAnchor, constant: -3).isActive = true
+        bageValue.centerYAnchor.constraint(equalTo: btn.centerYAnchor, constant: -10).isActive = true
+        bageValue.heightAnchor.constraint(equalToConstant: 16).isActive = true
     }
     
 }
@@ -225,6 +252,9 @@ class CustomTabBar: UITabBar {
             if index == 0 {
                 item.selectedStatus = true
             }
+            if index == 3 {
+                item.isMessageStatus = true
+            }
             if item is TitleTabbarItem {
                 item.frame = CGRect(x: itemW * CGFloat(index), y: 0, width: itemW, height: height)
             } else if item is ButtonTabbarItem {
@@ -244,4 +274,7 @@ class CustomTabBar: UITabBar {
             }
         }
     }
+    
+    
+    
 }
