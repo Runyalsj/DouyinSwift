@@ -41,7 +41,6 @@ class VideoFeedViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
-   
 }
 
 extension VideoFeedViewController {

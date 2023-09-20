@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.8.2)
   - FBRetainCycleDetector (0.1.4)
+  - LookinServer (1.0.4)
   - lottie-ios (3.1.0)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
@@ -16,6 +17,7 @@ PODS:
   - RxSwift (4.5.0)
 
 DEPENDENCIES:
+  - LookinServer
   - lottie-ios
   - MLeaksFinder
   - Moya/RxSwift (~> 13.0)
@@ -32,10 +34,13 @@ SPEC REPOS:
     - Result
     - RxCocoa
     - RxSwift
+  trunk:
+    - LookinServer
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  LookinServer: 743c1681771d0a8dcc38825325a080c3186404a5
   lottie-ios: 9467723922dfff46f6d4e3019c32594a62440b7c
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
@@ -43,6 +48,6 @@ SPEC CHECKSUMS:
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
 
-PODFILE CHECKSUM: c8393296ef22c3de870c6fe5371b9e72addaec73
+PODFILE CHECKSUM: 33725e317e7429a35afe0ebc0e872f17a7c931d0
 
 COCOAPODS: 1.11.2

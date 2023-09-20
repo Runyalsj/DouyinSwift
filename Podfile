@@ -11,4 +11,5 @@ target 'DouyinSwift' do
   pod 'Moya/RxSwift', '~> 13.0'
   pod 'lottie-ios'
   pod 'MLeaksFinder'
+  pod 'LookinServer', :configurations => ['Debug']
 end
