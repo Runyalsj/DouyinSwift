@@ -148,7 +148,7 @@ class AvatarView: UIView {
     func updateContentLabelHeight() {
         guard let contentText = contentLabel.text else { return }
         
-        let contentWidth = bounds.width - avatarImageView.bounds.width - accessoryImageView.bounds.width - 16
+        let contentWidth = bounds.width - 30 - 32
         let contentSize = contentText.boundingRect(with: CGSize(width: contentWidth, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: contentLabel.font!], context: nil)
         contentLabel.frame.size.height = ceil(contentSize.height)
         updateViewHeight()

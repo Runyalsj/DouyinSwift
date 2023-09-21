@@ -60,14 +60,14 @@ extension VideoFeedViewController {
     
     
     func addHotView() {
-        hotView.hotTtile = "上升热点:  你对他的看法是什么  |  8893.6万人在看"
+        hotView.hotTtile = "上升热点:  我该怎么形容她呢 | 183.4万人在看"
         
         view.addSubview(hotView)
         hotView.translatesAutoresizingMaskIntoConstraints = false
         hotView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         hotView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         hotView.heightAnchor.constraint(equalToConstant: 44).isActive = true
-        hotView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 30).isActive = true
+        hotView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 20).isActive = true
     }
     
     func addContentView() {
@@ -76,7 +76,7 @@ extension VideoFeedViewController {
         avatarView.avatarImageName = "avatar"
         avatarView.nickname = "@文案阁"
         avatarView.mood = "1分钟前 广州"
-        avatarView.content = "他突然死了和他突然不爱了 你更能接受哪一个"
+        avatarView.content = "她很悲观，她总是很晚才睡。\n\n别人总说她性子开朗又乐观，但只有她自己知道\n\n她内心一片荒芜，寸草不生。\n她总会莫名其妙的掉眼泪。\n她总喜欢把很多事情往最坏的方向去想。\n\n她就算流着眼泪，哭到室息也会嘴硬的说哈哈哈。\n\n她很独立，能自己做的事情绝对不会求助他人。她发起火来会说脏话，但也经常和别人说谢谢。她多愁善感又敏感焦虑，她果断又优柔寡断。她矛盾又清醒，她对任何事情都充满了期待。\n\n\n她勇敢却又胆小，没人愿意拾起那个破碎的她。\n\n她是个可以治愈别人的人，却治愈不了她自己.她无限的去表达自己又隐藏自己。她多么希望\n\n有人能看到她大大例的外壳里包裹着腐朽生锈的灵魂。\n\n我很想救她，可她是我自己。"
         avatarView.accessoryImageName = "avatarEffec"
         
         // 将头像组件视图添加到主视图上
