@@ -103,6 +103,8 @@
 		9B95FC1F2ABB56B600526258 /* HotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95FC1E2ABB56B600526258 /* HotView.swift */; };
 		9B95FC232ABB58C900526258 /* hotfire.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9B95FC222ABB58C900526258 /* hotfire.PNG */; };
 		9B95FC252ABB5DBD00526258 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95FC242ABB5DBD00526258 /* AvatarView.swift */; };
+		E6E5C6952ABC086D0031E2ED /* avatarEffec.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E5C6942ABC086D0031E2ED /* avatarEffec.png */; };
+		E6E5C6972ABC0E7B0031E2ED /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E5C6962ABC0E7B0031E2ED /* avatar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -207,6 +209,8 @@
 		9B95FC222ABB58C900526258 /* hotfire.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotfire.PNG; sourceTree = "<group>"; };
 		9B95FC242ABB5DBD00526258 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		B14220EFF1CB778E1017B11E /* Pods-DouyinSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouyinSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouyinSwift/Pods-DouyinSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		E6E5C6942ABC086D0031E2ED /* avatarEffec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatarEffec.png; sourceTree = "<group>"; };
+		E6E5C6962ABC0E7B0031E2ED /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +247,8 @@
 		8342CB822296A9B0009685E2 /* DouyinSwift */ = {
 			isa = PBXGroup;
 			children = (
+				E6E5C6962ABC0E7B0031E2ED /* avatar.png */,
+				E6E5C6942ABC086D0031E2ED /* avatarEffec.png */,
 				9B95FC222ABB58C900526258 /* hotfire.PNG */,
 				830615C5229EDEDF0038E318 /* LottieResources */,
 				83859D43229CF9B200EB1FE1 /* NetWork */,
@@ -574,6 +580,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6E5C6972ABC0E7B0031E2ED /* avatar.png in Resources */,
 				833C79EA22A6CE180030C71B /* UserFavoriteList.json in Resources */,
 				9B95FC232ABB58C900526258 /* hotfire.PNG in Resources */,
 				8342CB8E2296A9B1009685E2 /* LaunchScreen.storyboard in Resources */,
@@ -583,6 +590,7 @@
 				836F4AD122A5389500D3B6D9 /* UserMusicList.json in Resources */,
 				8342CB8B2296A9B1009685E2 /* Assets.xcassets in Resources */,
 				83859D34229C199B00EB1FE1 /* Feed1.json in Resources */,
+				E6E5C6952ABC086D0031E2ED /* avatarEffec.png in Resources */,
 				830615C6229EDEDF0038E318 /* LottieResources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

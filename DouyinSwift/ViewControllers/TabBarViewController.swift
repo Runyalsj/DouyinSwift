@@ -256,10 +256,10 @@ class CustomTabBar: UITabBar {
                 item.isMessageStatus = true
             }
             if item is TitleTabbarItem {
-                item.frame = CGRect(x: itemW * CGFloat(index), y: 0, width: itemW, height: height)
+                item.frame = CGRect(x: itemW * CGFloat(index), y: 0, width: itemW, height: height - 10)
             } else if item is ButtonTabbarItem {
                 addSubview(item)
-                item.frame = CGRect(x: itemW * CGFloat(index), y: 0, width: itemW, height: height)
+                item.frame = CGRect(x: itemW * CGFloat(index), y: 0, width: itemW, height: height - 10)
             }
         }
     }

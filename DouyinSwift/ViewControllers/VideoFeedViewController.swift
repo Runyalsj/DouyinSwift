@@ -60,22 +60,24 @@ extension VideoFeedViewController {
     
     
     func addHotView() {
+        hotView.hotTtile = "上升热点:  你对他的看法是什么  |  8893.6万人在看"
+        
         view.addSubview(hotView)
         hotView.translatesAutoresizingMaskIntoConstraints = false
         hotView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         hotView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         hotView.heightAnchor.constraint(equalToConstant: 44).isActive = true
-        hotView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 15).isActive = true
+        hotView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 30).isActive = true
     }
     
     func addContentView() {
         let avatarView = AvatarView()
         // 设置头像、昵称、心情描述、内容和头饰的内容
-        avatarView.avatarImageName = "avatar_image"
-        avatarView.nickname = "用户名"
-        avatarView.mood = "心情好"
-        avatarView.content = "这是一段内容文本，它可以自动调整视图的高度以适应文本的长度。这是一段内容文本，它可以自动调整视图的高度以适应文本的长度。这是一段内容文本，它可以自动调整视图的高度以适应文本的长度。这是一段内容文本，它可以自动调整视图的高度以适应文本的长度。"
-        avatarView.accessoryImageName = "accessory_image"
+        avatarView.avatarImageName = "avatar"
+        avatarView.nickname = "@文案阁"
+        avatarView.mood = "1分钟前 广州"
+        avatarView.content = "他突然死了和他突然不爱了 你更能接受哪一个"
+        avatarView.accessoryImageName = "avatarEffec"
         
         // 将头像组件视图添加到主视图上
         view.addSubview(avatarView)
@@ -83,7 +85,7 @@ extension VideoFeedViewController {
         
         NSLayoutConstraint.activate([
             avatarView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            avatarView.bottomAnchor.constraint(equalTo: hotView.topAnchor, constant: -20),
+            avatarView.bottomAnchor.constraint(equalTo: hotView.topAnchor),
             avatarView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
         

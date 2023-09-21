@@ -25,7 +25,16 @@ class HotRankingView: UIView {
         setupUI()
     }
     
+    // 内容文本
+    var hotTtile: String? {
+        didSet {
+            titleLabel.text = hotTtile
+        }
+    }
+    
+    
     func setupUI() {
+        self.backgroundColor = UIColor("0x0e0e0e")
         // 设置图标图片
         let originalImage = UIImage(named: "fire_icon12x16") // 原始图片
 
@@ -39,8 +48,8 @@ class HotRankingView: UIView {
         
         // 设置标题文本
         titleLabel.text = "热榜: 多么美好的一天啊 | 8893.6万人在看"
-        titleLabel.font = UIFont.systemFont(ofSize: 12)
-        titleLabel.textColor = UIColor.yellow
+        titleLabel.font = UIFont.systemFont(ofSize: 13)
+        titleLabel.textColor = UIColor(red: 230, green: 198, blue: 80)
         
         // 将图标和标题添加到自定义视图中
         addSubview(iconImageView)
@@ -53,8 +62,8 @@ class HotRankingView: UIView {
         NSLayoutConstraint.activate([
             iconImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            iconImageView.widthAnchor.constraint(equalToConstant: 12),
-            iconImageView.heightAnchor.constraint(equalToConstant: 12),
+            iconImageView.widthAnchor.constraint(equalToConstant: 13),
+            iconImageView.heightAnchor.constraint(equalToConstant: 13),
             
             titleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 8),
             titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),

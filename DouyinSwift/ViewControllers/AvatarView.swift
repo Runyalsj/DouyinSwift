@@ -73,12 +73,12 @@ class AvatarView: UIView {
         avatarImageView.borderWidth  = 1
         
         // 设置昵称文本
-        nameLabel.font = UIFont.systemFont(ofSize: 14)
-        nameLabel.textColor = UIColor.black
+        nameLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        nameLabel.textColor = UIColor.white
         
         // 设置心情描述文本
         moodLabel.font = UIFont.systemFont(ofSize: 12)
-        moodLabel.textColor = UIColor.gray
+        moodLabel.textColor = UIColor.lightGray
         
         // 设置内容文本
         contentLabel.font = UIFont.systemFont(ofSize: 15)
@@ -87,16 +87,16 @@ class AvatarView: UIView {
         
         // 设置头饰图片
         accessoryImageView.contentMode = .scaleAspectFit
-        accessoryImageView.borderWidth = 1
-        accessoryImageView.borderColor = .yellow
+//        accessoryImageView.borderWidth = 1
+//        accessoryImageView.borderColor = .yellow
         accessoryImageView.clipsToBounds = true
         
         // 将头像、昵称、心情描述、内容和头饰添加到自定义视图中
         addSubview(avatarImageView)
+        addSubview(accessoryImageView)
         addSubview(nameLabel)
         addSubview(moodLabel)
         addSubview(contentLabel)
-        addSubview(accessoryImageView)
         
         // 设置头像、昵称、心情描述、内容和头饰的布局约束
         avatarImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -111,21 +111,23 @@ class AvatarView: UIView {
             avatarImageView.widthAnchor.constraint(equalToConstant: 50),
             avatarImageView.heightAnchor.constraint(equalToConstant: 50),
             
-            nameLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 8),
-            nameLabel.topAnchor.constraint(equalTo: topAnchor),
+            accessoryImageView.centerXAnchor.constraint(equalTo: avatarImageView.centerXAnchor),
+            accessoryImageView.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor),
+            accessoryImageView.widthAnchor.constraint(equalTo: avatarImageView.widthAnchor, multiplier: 1.4),
+            accessoryImageView.heightAnchor.constraint(equalTo: avatarImageView.heightAnchor, multiplier: 1.4),
+            
+            nameLabel.leadingAnchor.constraint(equalTo: accessoryImageView.trailingAnchor, constant: 5),
+            nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 6),
             nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30),
             
             moodLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
-            moodLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
+            moodLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 6),
             
             contentLabel.leadingAnchor.constraint(equalTo: avatarImageView.leadingAnchor),
-            contentLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 8),
-            contentLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30),
+            contentLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 10),
+            contentLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30)
             
-            accessoryImageView.centerXAnchor.constraint(equalTo: avatarImageView.centerXAnchor),
-            accessoryImageView.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor),
-            accessoryImageView.widthAnchor.constraint(equalTo: avatarImageView.widthAnchor, multiplier: 1.2),
-            accessoryImageView.heightAnchor.constraint(equalTo: avatarImageView.heightAnchor, multiplier: 1.2)
+            
         ])
         accessoryImageView.layoutIfNeeded()
         avatarImageView.layoutIfNeeded()
