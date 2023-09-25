@@ -60,12 +60,12 @@ extension VideoFeedViewController {
     
     
     func addHotView() {
-        hotView.hotTtile = "上升热点:  我该怎么形容她呢 | 183.4万人在看"
+        hotView.hotTtile = "热榜: 说说你最近的状态  | 9788.2万人在看"
         
         view.addSubview(hotView)
         hotView.translatesAutoresizingMaskIntoConstraints = false
-        hotView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        hotView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        hotView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 5).isActive = true
+        hotView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
         hotView.heightAnchor.constraint(equalToConstant: 44).isActive = true
         hotView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 20).isActive = true
     }
@@ -76,8 +76,9 @@ extension VideoFeedViewController {
         avatarView.avatarImageName = "avatar"
         avatarView.nickname = "@文案阁"
         avatarView.mood = "1分钟前 广州"
-        avatarView.content = "她很悲观，她总是很晚才睡。\n\n别人总说她性子开朗又乐观，但只有她自己知道\n\n她内心一片荒芜，寸草不生。\n她总会莫名其妙的掉眼泪。\n她总喜欢把很多事情往最坏的方向去想。\n\n她就算流着眼泪，哭到室息也会嘴硬的说哈哈哈。\n\n她很独立，能自己做的事情绝对不会求助他人。她发起火来会说脏话，但也经常和别人说谢谢。她多愁善感又敏感焦虑，她果断又优柔寡断。她矛盾又清醒，她对任何事情都充满了期待。\n\n\n她勇敢却又胆小，没人愿意拾起那个破碎的她。\n\n她是个可以治愈别人的人，却治愈不了她自己.她无限的去表达自己又隐藏自己。她多么希望\n\n有人能看到她大大例的外壳里包裹着腐朽生锈的灵魂。\n\n我很想救她，可她是我自己。"
-        avatarView.accessoryImageName = "avatarEffec"
+//        avatarView.accessoryImageName = "avatarEffec"
+        avatarView.content = "我爱了他四次 第一次 开始他把我捧在手心里 第二次 我看到了他所有缺点 还是相信他说的 他会改 第三次 明明知道两个人之间有隔阂了 即使每次都会流泪自己消化情绪可依旧相信他 第四次 他我行我素空有一张说爱我的嘴一百个不爱我的细节 我真正意识到无法再继续下去的时候 我决定结束了"
+        
         
         // 将头像组件视图添加到主视图上
         view.addSubview(avatarView)
@@ -85,7 +86,7 @@ extension VideoFeedViewController {
         
         NSLayoutConstraint.activate([
             avatarView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            avatarView.bottomAnchor.constraint(equalTo: hotView.topAnchor),
+            avatarView.bottomAnchor.constraint(equalTo: hotView.topAnchor, constant: 0),
             avatarView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
         

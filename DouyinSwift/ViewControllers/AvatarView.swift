@@ -125,7 +125,7 @@ class AvatarView: UIView {
             
             contentLabel.leadingAnchor.constraint(equalTo: avatarImageView.leadingAnchor),
             contentLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 10),
-            contentLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30)
+            contentLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50)
             
             
         ])
